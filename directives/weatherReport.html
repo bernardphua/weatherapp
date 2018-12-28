@@ -1,0 +1,14 @@
+<div class="card bg-light mb-3">
+    <div class="card-header">
+        <h5 class="card-title">
+            {{ convertToDate( {dt: weatherDay.dt}) | date : dateFormat }}
+        </h5>
+    </div>
+    <div class="card card-body">
+        <h6>
+            <p class="card-text text-black">
+                Daytime Temperature: {{ convertToStandard({temp : weatherDay.main.temp }) }}
+            </p>
+        </h6>
+    </div>
+</div>
