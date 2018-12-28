@@ -8,7 +8,7 @@ weatherApp.service('weatherService', ['$resource', function ($resource) {
 
     this.GetWeather = function (city, days) {
 
-        var weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast", {
+        var weatherAPI = $resource("https://api.openweathermap.org/data/2.5/forecast", {
             callback: "JSON_CALLBACK"
         }, {
             get: {
