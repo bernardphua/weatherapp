@@ -1,14 +1,27 @@
-<div class="card bg-light mb-3">
-    <div class="card-header">
+<div class="card bg-info mb-3">
+    <div class="card-header text-white" style="padding:0.8rem">
         <h5 class="card-title">
             {{ convertToDate( {dt: weatherDay.dt}) | date : dateFormat }}
         </h5>
     </div>
-    <div class="card card-body">
+    <div class="card-body bg-white text-black" style="padding:0.8rem">
         <h6>
-            <p class="card-text text-black">
-                Daytime Temperature: {{ convertToStandard({temp : weatherDay.main.temp }) }}
-            </p>
+            <!-- <p class="card-text text-black"> -->
+            <table>
+                <tr>
+                    <td>Daytime Temperature:&nbsp</td>
+                    <td>{{ convertToStandard({temp : weatherDay.main.temp }) }} &deg;C </td>
+                </tr>
+                <tr>
+                    <td>Min Temperature:</td>
+                    <td>{{ convertToStandard({temp: weatherDay.main.temp_min}) }} &deg;C</td>
+                </tr>
+                <tr>
+                    <td>Max Temperature:</td>
+                    <td>{{ convertToStandard({temp: weatherDay.main.temp_max}) }} &deg;C</td>
+                </tr>
+            </table>
+            <!-- </p> -->
         </h6>
     </div>
 </div>

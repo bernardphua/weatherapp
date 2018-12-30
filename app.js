@@ -7,3 +7,7 @@ weatherApp.config(function($sceDelegateProvider) {
         'https://api.openweathermap.org/**'
     ]);
 });
+
+weatherApp.config(['$locationProvider', function($locationProvider){
+    $locationProvider.hashPrefix('');
+}]);
