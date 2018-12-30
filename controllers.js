@@ -9,7 +9,7 @@ weatherApp.controller('homeController', ['$scope', '$location', 'cityService', f
 
     $scope.submit = function () {
         $location.path("/forecast");
-    }
+    };
 
 }]);
 
@@ -23,9 +23,9 @@ weatherApp.controller('forecastController', ['$scope', '$routeParams', 'cityServ
 
         $scope.convertToCelsius = function (degK) {
             return Math.round(degK - 273.15);
-        }
+        };
 
         $scope.convertToDate = function (dt) {
             return new Date(dt * 1000);
-        }
+        };
 }]);
